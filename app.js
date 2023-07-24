@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xssClean = require('xss-clean');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -62,6 +63,8 @@ app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
   next();
 });
+
+app.use(compression());
 
 
 ////////////////////////////////////////
