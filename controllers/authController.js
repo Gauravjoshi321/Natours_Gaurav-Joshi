@@ -64,6 +64,7 @@ exports.login = catchAsync(async (req, res, next) => {
   }
 
   // 3. If OK, then provide the JSON web token
+
   createSendToken(user, 200, res);
 })
 

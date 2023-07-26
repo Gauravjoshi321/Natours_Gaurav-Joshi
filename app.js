@@ -45,6 +45,7 @@ const limiter = rateLimit({
   windowsMs: 60 * 60 * 1000,
   message: 'To many requests from this IP, Please try again later !'
 })
+
 app.use('/api', limiter);
 
 // 4. Body parser

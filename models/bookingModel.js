@@ -27,8 +27,7 @@ const bookingSchema = new mongoose.Schema({
 
 // Mongoose middleware
 // bookingSchema.pre(/^find/, function (next) {
-//   this
-//     .populate('user')
+//   this.populate('user')
 //     .populate('tour');
 
 //   next();
