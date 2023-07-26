@@ -13,8 +13,9 @@ const mongoose = require('mongoose');
 
 // CONNECT TO ATLAS
 // const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD)
+const DB = 'mongodb+srv://gauravjoshi:Ananta@123@cluster0.9heejm2.mongodb.net/natoursdatabase?retryWrites=true&w=majority';
 
-mongoose.connect('mongodb+srv://gauravjoshi:Ananta@123@cluster0.9heejm2.mongodb.net/natoursdatabase?retryWrites=true&w=majority', {
+mongoose.connect(DB, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
