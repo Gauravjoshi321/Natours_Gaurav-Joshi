@@ -9,6 +9,7 @@ const xssClean = require('xss-clean');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
 const hpp = require('hpp');
+const cors = require('cors');
 
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -29,6 +30,10 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 // Global Middlewares
+
+// Implementing cors
+app.use(cors());
+
 // Serving static files: All static assets will be served through the Public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
