@@ -1,6 +1,7 @@
 import axios from "axios";
 import { showAlert } from "./alerts";
 
+const bookTourButton = document.getElementById('book-tour');
 
 const stripe = Stripe('pk_test_51NWCeCSDFqjU2wBWpRcRyjKPo8Rg1WxOgRWey7ptY4c0Le39eM1P7c4KEIBULvKMOaeOP4CpjFOGI7SmAITfnGCJ001Y0iphhn')
 
@@ -13,6 +14,8 @@ export const bookTour = async tourId => {
     await stripe.redirectToCheckout({
       sessionId: session.data.session.id
     })
+
+    showAlert('success', 'hjk');
 
   } catch (err) {
     console.log(err);

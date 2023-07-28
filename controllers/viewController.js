@@ -5,6 +5,7 @@ const User = require('../models/userModel');
 const Booking = require('../models/bookingModel');
 
 
+
 exports.getOverview = catchAsync(async (req, res, next) => {
   // 1. Get tour data from the tours collection
   const tours = await Tour.find();
@@ -23,6 +24,8 @@ exports.getTour = catchAsync(async (req, res, next) => {
     path: "reviews",
     fields: 'review rating user '
   })
+
+  console.log(tour);
 
   if (tour.length === 0) return next(new AppError('Tour does not exist', 404));
 
@@ -90,3 +93,4 @@ exports.myBookings = catchAsync(async (req, res, next) => {
     tours
   })
 })
+
