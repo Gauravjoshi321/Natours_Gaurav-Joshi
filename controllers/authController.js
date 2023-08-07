@@ -12,7 +12,7 @@ const Email = require('./../utils/email');
 
 
 const signToken = id => {
-  return jwt.sign({ id }, `${process.env.JWT_SECRET}`, { expiresIn: `${process.env.JWT_EXPIRES_IN}` })
+  return jwt.sign({ id }, `${process.env.JWT_SECRET}`, { expiresIn: "90d" })
 }
 
 const createSendToken = (user, statusCode, res, req) => {
