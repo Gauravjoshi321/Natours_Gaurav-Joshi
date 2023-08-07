@@ -25,7 +25,7 @@ exports.getTour = catchAsync(async (req, res, next) => {
     fields: 'review rating user '
   })
 
-  console.log(tour);
+  // console.log(tour);
 
   if (tour.length === 0) return next(new AppError('Tour does not exist', 404));
 
