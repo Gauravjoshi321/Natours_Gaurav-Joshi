@@ -79,12 +79,12 @@
   },
   {
     "startLocation": {
-      "description": "Banff, CAN",
       "type": "Point",
       "coordinates": [
         -115.570154,
         51.178456
       ],
+      "description": "Banff, CAN",
       "address": "224 Banff Ave, Banff, AB, Canada"
     },
     "ratingsAverage": 5,

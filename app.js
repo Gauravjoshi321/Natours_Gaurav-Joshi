@@ -63,6 +63,7 @@ app.use('/api', limiter);
 // );
 
 // 4. Body parser
+// req.body parser
 app.use(express.json({ limit: '10kb' }));
 // HTML form request body parser: but it's a feature of express itself
 app.use(express.urlencoded({ extended: true, limit: '10kb' }))

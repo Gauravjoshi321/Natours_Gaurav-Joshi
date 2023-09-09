@@ -87,10 +87,11 @@ exports.myBookings = catchAsync(async (req, res, next) => {
   const bookingTourIdsArray = bookings.map(el => el.tour);
   const tours = await Tour.find({ _id: { $in: bookingTourIdsArray } });
 
+  res.locals.bookings = "Bookings";
   // 3. Render the tour documents
   res.status(200).render('overview', {
     title: 'My Bookings',
-    tours
+    tours,
   })
 })
 
